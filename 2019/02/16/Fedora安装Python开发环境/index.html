@@ -5,15 +5,19 @@
   
 
   
-  <title>Dabai&#39;s Blogs</title>
+  <title>Fedora安装Python开发环境 | Dabai&#39;s Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Dabai&#39;s Blogs">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1. 安装Visual Studio Code1234$ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc$ sudo sh -c &apos;echo -e &quot;[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fedora安装Python开发环境">
+<meta property="og:url" content="http://yoursite.com/2019/02/16/Fedora安装Python开发环境/index.html">
 <meta property="og:site_name" content="Dabai&#39;s Blogs">
+<meta property="og:description" content="1. 安装Visual Studio Code1234$ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc$ sudo sh -c &apos;echo -e &quot;[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/">
 <meta property="og:locale" content="en-US,zh-CN">
+<meta property="og:updated_time" content="2019-02-24T12:15:59.521Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dabai&#39;s Blogs">
+<meta name="twitter:title" content="Fedora安装Python开发环境">
+<meta name="twitter:description" content="1. 安装Visual Studio Code1234$ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc$ sudo sh -c &apos;echo -e &quot;[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/">
   
     <link rel="alternate" href="/atom.xml" title="Dabai&#39;s Blogs" type="application/atom+xml">
   
@@ -64,163 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Fedora基于Hexo搭建博客" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/02/24/Fedora基于Hexo搭建博客/" class="article-date">
-  <time datetime="2019-02-24T12:28:58.000Z" itemprop="datePublished">2019-02-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/24/Fedora基于Hexo搭建博客/">Fedora基于Hexo搭建博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a>1. 安装Hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dnf install nodejs</span><br><span class="line">$ sudo dnf install npm</span><br><span class="line">$ sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h2 id="2-生成博客"><a href="#2-生成博客" class="headerlink" title="2. 生成博客"></a>2. 生成博客</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~</span><br><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<h2 id="3-配置站点"><a href="#3-配置站点" class="headerlink" title="3. 配置站点"></a>3. 配置站点</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure>
-<p>属性值参照hexo官方文档-<a href="https://hexo.io/docs/。" target="_blank" rel="noopener">https://hexo.io/docs/。</a></p>
-<h2 id="4-部署到Github"><a href="#4-部署到Github" class="headerlink" title="4. 部署到Github"></a>4. 部署到Github</h2><ul>
-<li>在github上注册账号，比如：samuelbaizg</li>
-<li><p>在_config.yml, 配置github部署信息，比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/samuelbaizg/samuelbaizg.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行如下命令部署到Github</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/blog</span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/24/Fedora基于Hexo搭建博客/" data-id="cjsiz3opi0000p2pv7smhjjhr" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Hexo-Quick-Start" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/02/16/Hexo-Quick-Start/" class="article-date">
-  <time datetime="2019-02-16T14:54:23.679Z" itemprop="datePublished">2019-02-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/Hexo-Quick-Start/">Hexo Quick Start</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h3 id="Annex"><a href="#Annex" class="headerlink" title="Annex"></a>Annex</h3><p>Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/16/Hexo-Quick-Start/" data-id="cjsiz3opq0002p2pvavbnu2jy" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Markdown语法" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/02/16/Markdown语法/" class="article-date">
-  <time datetime="2019-02-16T14:08:19.000Z" itemprop="datePublished">2019-02-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/Markdown语法/">Markdown语法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 这是一级标题</span></span><br><span class="line"><span class="section">## 这是二级标题</span></span><br><span class="line"><span class="section">### 这是三级标题</span></span><br><span class="line"><span class="section">#### 这是四级标题</span></span><br><span class="line"><span class="section">##### 这是五级标题</span></span><br><span class="line"><span class="section">###### 这是六级标题</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-字体样式"><a href="#2-字体样式" class="headerlink" title="2. 字体样式"></a>2. 字体样式</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**这是加粗的文字**</span></span><br><span class="line"><span class="emphasis">*这是倾斜的文字*</span>`</span><br><span class="line"><span class="strong">***这是斜体加粗的文字**</span>*</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
-<h1 id="3-引用"><a href="#3-引用" class="headerlink" title="3. 引用"></a>3. 引用</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;这是引用的内容</span><br><span class="line">&gt;&gt;这是引用的内容</span><br><span class="line">&gt;&gt;&gt;这是引用的内容</span><br></pre></td></tr></table></figure>
-<h1 id="4-分割线"><a href="#4-分割线" class="headerlink" title="4. 分割线"></a>4. 分割线</h1><p>三个或者三个以上的 - 或者 * 都可以作分割线<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">----</span><br><span class="line"><span class="emphasis">***</span></span><br><span class="line"><span class="strong">*****</span></span><br></pre></td></tr></table></figure></p>
-<h1 id="5-图片"><a href="#5-图片" class="headerlink" title="5. 图片"></a>5. 图片</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片alt-显示在图片下面的文字，相当于对图片内容的解释</span>](<span class="link">图片地址 ''图片的标题，当鼠标移到图片上时显示的内容，可加可不加''</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="6-超级链接"><a href="#6-超级链接" class="headerlink" title="6. 超级链接"></a>6. 超级链接</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">简书</span>](<span class="link">http://jianshu.com， "超链接title， 可加可不加"</span>)</span><br><span class="line">[<span class="string">百度</span>](<span class="link">http://baidu.com， "超链接title， 可加可不加"</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="7-无序列表"><a href="#7-无序列表" class="headerlink" title="7. 无序列表"></a>7. 无序列表</h1><p>无序列表用 - + * 任何一种都可以<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>列表内容</span><br><span class="line"><span class="bullet">+ </span>列表内容</span><br><span class="line"><span class="bullet">* </span>列表内容</span><br></pre></td></tr></table></figure></p>
-<p>注意：- + * 跟内容之间都要有一个空格</p>
-<h1 id="8-有序列表"><a href="#8-有序列表" class="headerlink" title="8. 有序列表"></a>8. 有序列表</h1><p>数字加点<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>列表内容</span><br><span class="line"><span class="bullet">2. </span>列表内容</span><br><span class="line"><span class="bullet">3. </span>列表内容</span><br></pre></td></tr></table></figure></p>
-<p>注意：序号跟内容之间要有空格</p>
-<h1 id="9-列表嵌套"><a href="#9-列表嵌套" class="headerlink" title="9. 列表嵌套"></a>9. 列表嵌套</h1><p>上一级和下一级之间敲三个空格即可<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>一级无序列表内容</span><br><span class="line">   + 二级无序列表内容</span><br><span class="line">   + 二级无序列表内容</span><br><span class="line">   1. 一级无序列表内容</span><br><span class="line"><span class="bullet">1. </span>一级有序列表内容</span><br><span class="line">   1. 二级有序列表内容</span><br><span class="line">   2. 二级有序列表内容</span><br></pre></td></tr></table></figure></p>
-<h1 id="10-表格"><a href="#10-表格" class="headerlink" title="10. 表格"></a>10. 表格</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|:--:|---:</span><br><span class="line">内容|内容居中|内容居右</span><br><span class="line">内容默认居左|内容居中|内容居右</span><br></pre></td></tr></table></figure>
-<h1 id="11-代码"><a href="#11-代码" class="headerlink" title="11. 代码"></a>11. 代码</h1><ul>
-<li><p>Python</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```python</span></span><br><span class="line"><span class="code">def hello():</span></span><br><span class="line"><span class="code">    print("hello world")</span></span><br><span class="line"><span class="code">hello()</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Bash</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```bash</span></span><br><span class="line"><span class="code">$ cd /etc</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Html</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```html</span></span><br><span class="line"><span class="code">&lt;div&gt;这是html片段&lt;/div&gt;</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>注意：3X个<code>实现嵌套，比如6个</code>括起来的代码片段可以包含3个<code>的代码片段，即3个</code>会被原样显示，不会被转换成代码样式显示</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/16/Markdown语法/" data-id="cjsiz3opr0003p2pvxirg25ol" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Fedora安装Python开发环境" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-Fedora安装Python开发环境" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/02/16/Fedora安装Python开发环境/" class="article-date">
   <time datetime="2019-02-16T13:54:57.000Z" itemprop="datePublished">2019-02-16</time>
@@ -233,8 +81,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/Fedora安装Python开发环境/">Fedora安装Python开发环境</a>
+    <h1 class="article-title" itemprop="name">
+      Fedora安装Python开发环境
     </h1>
   
 
@@ -302,11 +150,23 @@
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/2019/02/16/Markdown语法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Markdown语法
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
-
+</article>
 
 </section>
         
