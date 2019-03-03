@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Dabai&#39;s Blogs</title>
   
-  <subtitle>机器学习、深度学习、量化交易</subtitle>
+  <subtitle>机器学习、量化交易、编程实践</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://samuelbaizg.github.io/"/>
