@@ -100,7 +100,7 @@
 
 
 
-  <meta name="keywords" content="Python,">
+  <meta name="keywords" content="Python,Flask,">
 
 
 
@@ -113,18 +113,18 @@
 
 
 
-<meta name="description" content="因为make install的软件并没有被软件管理器管理，所以只能手工删除文件,下面是通过make altinstall安装的Python3.6.2的文件路径，用rm擅除即可。 123456789101112# sudo rm -r /usr/local/lib/python3.6# sudo rm -r /usr/local/include/python3.6m# sudo rm -r /usr">
-<meta name="keywords" content="Python">
+<meta name="description" content="Pycharm调试运行Flask run启动的程序 打开Run Configuration，新增运行Python配置   Configuration页签下，各个参数配置如下：  12345Module name: flaskParameters: runEnvironment variables: PYTHONBUFFERED=1;FLASK_APP=&amp;#123;name&amp;#125;;FLASK_">
+<meta name="keywords" content="Python,Flask">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Fedora-卸载源码安装的Python3">
-<meta property="og:url" content="http://samuelbaizg.github.io/2019/03/03/Fedora卸载源码安装的Python3/index.html">
+<meta property="og:title" content="Flask开发FAQ">
+<meta property="og:url" content="http://samuelbaizg.github.io/2019/03/09/Flask开发FAQ/index.html">
 <meta property="og:site_name" content="Dabai&#39;s Blogs">
-<meta property="og:description" content="因为make install的软件并没有被软件管理器管理，所以只能手工删除文件,下面是通过make altinstall安装的Python3.6.2的文件路径，用rm擅除即可。 123456789101112# sudo rm -r /usr/local/lib/python3.6# sudo rm -r /usr/local/include/python3.6m# sudo rm -r /usr">
+<meta property="og:description" content="Pycharm调试运行Flask run启动的程序 打开Run Configuration，新增运行Python配置   Configuration页签下，各个参数配置如下：  12345Module name: flaskParameters: runEnvironment variables: PYTHONBUFFERED=1;FLASK_APP=&amp;#123;name&amp;#125;;FLASK_">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-10T13:46:16.055Z">
+<meta property="og:updated_time" content="2019-03-09T03:46:05.293Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fedora-卸载源码安装的Python3">
-<meta name="twitter:description" content="因为make install的软件并没有被软件管理器管理，所以只能手工删除文件,下面是通过make altinstall安装的Python3.6.2的文件路径，用rm擅除即可。 123456789101112# sudo rm -r /usr/local/lib/python3.6# sudo rm -r /usr/local/include/python3.6m# sudo rm -r /usr">
+<meta name="twitter:title" content="Flask开发FAQ">
+<meta name="twitter:description" content="Pycharm调试运行Flask run启动的程序 打开Run Configuration，新增运行Python配置   Configuration页签下，各个参数配置如下：  12345Module name: flaskParameters: runEnvironment variables: PYTHONBUFFERED=1;FLASK_APP=&amp;#123;name&amp;#125;;FLASK_">
 
 
 
@@ -154,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://samuelbaizg.github.io/2019/03/03/Fedora卸载源码安装的Python3/">
+  <link rel="canonical" href="http://samuelbaizg.github.io/2019/03/09/Flask开发FAQ/">
 
 
 
 
 
-  <title>Fedora-卸载源码安装的Python3 | Dabai's Blogs</title>
+  <title>Flask开发FAQ | Dabai's Blogs</title>
   
 
 
@@ -298,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://samuelbaizg.github.io/2019/03/03/Fedora卸载源码安装的Python3/">
+    <link itemprop="mainEntityOfPage" href="http://samuelbaizg.github.io/2019/03/09/Flask开发FAQ/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dabai">
@@ -315,7 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Fedora-卸载源码安装的Python3</h1>
+          <h1 class="post-title" itemprop="name headline">Flask开发FAQ</h1>
         
 
         <div class="post-meta">
@@ -327,8 +327,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-03T22:14:11+08:00">
-                2019-03-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-09T11:28:43+08:00">
+                2019-03-09
               </time>
             
 
@@ -387,8 +387,15 @@
       
 
       
-        <p>因为make install的软件并没有被软件管理器管理，所以只能手工删除文件,下面是通过make altinstall安装的Python3.6.2的文件路径，用rm擅除即可。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo rm -r /usr/local/lib/python3.6</span></span><br><span class="line"><span class="comment"># sudo rm -r /usr/local/include/python3.6m</span></span><br><span class="line"><span class="comment"># sudo rm -r /usr/local/bin/python3.6m-config</span></span><br><span class="line"><span class="comment"># sudo rm -r /usr/local/bin/pydoc3.6</span></span><br><span class="line"><span class="comment"># sudo rm -r /usr/local/bin/python3.6</span></span><br><span class="line"><span class="comment"># sudo rm -r /usr/local/bin/python3.6m</span></span><br><span class="line"><span class="comment"># sudo rm -r /usr/local/bin/pyvenv-3.6</span></span><br><span class="line"><span class="comment"># sudo rm -r /usr/local/bin/2to3-3.6</span></span><br><span class="line"><span class="comment"># sudo rm -r /usr/local/bin/idle3.6</span></span><br><span class="line"><span class="comment"># sudo rm -r /usr/local/bin/pip3.6</span></span><br><span class="line"><span class="comment"># sudo rm -r /usr/local/bin/pip3</span></span><br><span class="line"><span class="comment"># sudo rm -r /usr/local/share/man/man1/python3.6.1</span></span><br></pre></td></tr></table></figure>
+        <h1 id="Pycharm调试运行Flask-run启动的程序"><a href="#Pycharm调试运行Flask-run启动的程序" class="headerlink" title="Pycharm调试运行Flask run启动的程序"></a>Pycharm调试运行Flask run启动的程序</h1><ul>
+<li>打开Run Configuration，新增运行Python配置  </li>
+<li>Configuration页签下，各个参数配置如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Module name: flask</span><br><span class="line">Parameters: run</span><br><span class="line">Environment variables: PYTHONBUFFERED=1;FLASK_APP=&#123;name&#125;;FLASK_ENV=development       &#123;name&#125;替换成Flask App名称</span><br><span class="line">Python interpreter: 选择使用的pipenv环境</span><br><span class="line">Working directory: 运行目录</span><br></pre></td></tr></table></figure>
+<ul>
+<li>点击 Run开始调试</li>
+</ul>
+
       
     </div>
     
@@ -408,7 +415,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://samuelbaizg.github.io/2019/03/03/Fedora卸载源码安装的Python3/" title="Fedora-卸载源码安装的Python3">http://samuelbaizg.github.io/2019/03/03/Fedora卸载源码安装的Python3/</a>
+    <a href="http://samuelbaizg.github.io/2019/03/09/Flask开发FAQ/" title="Flask开发FAQ">http://samuelbaizg.github.io/2019/03/09/Flask开发FAQ/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -425,6 +432,8 @@
           
             <a href="/tags/Python/" rel="tag"># Python</a>
           
+            <a href="/tags/Flask/" rel="tag"># Flask</a>
+          
         </div>
       
 
@@ -436,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/03/Python常用命令一览/" rel="next" title="Python常用命令一览">
-                <i class="fa fa-chevron-left"></i> Python常用命令一览
+              <a href="/2019/03/09/Firefox扩展开发FAQ/" rel="next" title="Firefox扩展开发FAQ">
+                <i class="fa fa-chevron-left"></i> Firefox扩展开发FAQ
               </a>
             
           </div>
@@ -445,10 +454,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/09/Firefox扩展开发FAQ/" rel="prev" title="Firefox扩展开发FAQ">
-                Firefox扩展开发FAQ <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -502,8 +507,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -588,6 +602,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Pycharm调试运行Flask-run启动的程序"><span class="nav-number">1.</span> <span class="nav-text">Pycharm调试运行Flask run启动的程序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
