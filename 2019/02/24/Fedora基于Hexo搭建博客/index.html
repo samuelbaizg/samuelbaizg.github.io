@@ -121,7 +121,7 @@
 <meta property="og:site_name" content="Dabai&#39;s Blogs">
 <meta property="og:description" content="安装Hexo123# sudo dnf install nodejs# sudo dnf install npm# sudo npm install hexo-cli -g 生成博客12345# cd ~# hexo init blog# cd blog# npm install# hexo server 配置站点1# vim _config.yml 属性值参照hexo官方文档-https://h">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-16T06:39:58.725Z">
+<meta property="og:updated_time" content="2019-03-16T13:00:06.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fedora-基于Hexo搭建博客">
 <meta name="twitter:description" content="安装Hexo123# sudo dnf install nodejs# sudo dnf install npm# sudo npm install hexo-cli -g 生成博客12345# cd ~# hexo init blog# cd blog# npm install# hexo server 配置站点1# vim _config.yml 属性值参照hexo官方文档-https://h">
@@ -512,6 +512,22 @@
 </li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"https://aimingoo.github.io/gitmint/style/default.css"</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">"https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">替换成</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"/lib/gitmint/style/default.css"</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">"/lib/gitmint/gitmint.browser.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>如果点击评论登录github报[object ProgressEvent]错的话，说明作者的跨域服务停掉了，那么就需要自己搭建自己的服务.</p>
+<ul>
+<li>下载代码</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git clone https://github.com/imsun/gh-oauth-server.git</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行和启动服务</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm install &amp;&amp; npm start</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>打开 gitmint.browser.js 然后寻找代码字符串<a href="https://gh-oauth.imsun.net,替换成刚刚启动的自己的服务地址。" target="_blank" rel="noopener">https://gh-oauth.imsun.net,替换成刚刚启动的自己的服务地址。</a> </li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     
