@@ -1197,7 +1197,39 @@
 <li>运行如下命令部署到Github</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd ~/blog</span></span><br><span class="line"><span class="comment"># hexo clean</span></span><br><span class="line"><span class="comment"># hexo generate</span></span><br><span class="line"><span class="comment"># hexo deploy</span></span><br></pre></td></tr></table></figure>
-
+<h1 id="配置百度统计"><a href="#配置百度统计" class="headerlink" title="配置百度统计"></a>配置百度统计</h1><ul>
+<li>在百度统计（<a href="https://tongji.baidu.com）注册账号" target="_blank" rel="noopener">https://tongji.baidu.com）注册账号</a></li>
+<li>在管理-&gt;网站列表增加搭建的博客网站地址(如：samuelbaizg.github.io)</li>
+<li>在管理-&gt;代码管理-&gt;代码获取章节获取百度analytics Key</li>
+</ul>
+<p>例如：在下述代码中的hm.js?后的xxxxxxxxxxxxyyyyyyyyyyyyyy为百度analytics key。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">var</span> _hmt = _hmt || [];</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> hm = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</span><br><span class="line">  hm.src = <span class="string">"https://hm.baidu.com/hm.js?xxxxxxxxxxxxyyyyyyyyyyyyyy"</span>;</span><br><span class="line">  <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>]; </span><br><span class="line">  s.parentNode.insertBefore(hm, s);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>将百度analytics Key复制到themes/next/_config.yml中的baidu_analytics属性，如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Baidu Analytics ID</span><br><span class="line">baidu_analytics: xxxxxxxxxxxxyyyyyyyyyyyyyy</span><br></pre></td></tr></table></figure>
+<h1 id="安装Gitment评论插件"><a href="#安装Gitment评论插件" class="headerlink" title="安装Gitment评论插件"></a>安装Gitment评论插件</h1><ul>
+<li>登录github注册gitment应用</li>
+</ul>
+<p>依次点击–&gt;账户–&gt;settings–&gt;Developer settings–&gt;New Aouth App，名字叫 Gitment ，homeURL和AuthorizationURL都填写你的域名（如<a href="https://samuelbaig.github.io），记住生成的" target="_blank" rel="noopener">https://samuelbaig.github.io），记住生成的</a> client ID和 Client Secret，如xxx和yyy，稍后配置在hexo主题配置文件中</p>
+<ul>
+<li><p>在github新建Comments仓库，如blog-comments</p>
+</li>
+<li><p>修改themes/next/_config.yml中的gitment配置属性，如：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">gitment:</span><br><span class="line">  enable: true</span><br><span class="line">  mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway</span><br><span class="line">  count: true # Show comments count in post meta area</span><br><span class="line">  lazy: false # Comments lazy loading with a button</span><br><span class="line">  cleanly: false # Hide &apos;Powered by ...&apos; on footer, and more</span><br><span class="line">  language: zh-Hans # Force language, or auto switch by theme</span><br><span class="line">  github_user: samuelbaizg # MUST HAVE, Your Github ID</span><br><span class="line">  github_repo: blog-comments # MUST HAVE, The repo you use to store Gitment comments</span><br><span class="line">  client_id: xxx # MUST HAVE, Github client id for the Gitment</span><br><span class="line">  client_secret: yyy # EITHER this or proxy_gateway, Github access secret token for the Gitment</span><br><span class="line">  proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect</span><br><span class="line">  redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled</span><br></pre></td></tr></table></figure>
+<ul>
+<li>将gitment的JS保存到博客目录<ul>
+<li>下载支持mint=true的gitmint.browser.js ,下载地址是 <a href="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js" target="_blank" rel="noopener">https://aimingoo.github.io/gitmint/dist/gitmint.browser.js</a></li>
+<li>将gitmint.browser.js放到themes/next/source/lib/gitment目录下</li>
+<li>下载gitment的css， 下载地址是<a href="https://aimingoo.github.io/gitmint/style/default.css" target="_blank" rel="noopener">https://aimingoo.github.io/gitmint/style/default.css</a></li>
+<li>将default.css放到themes/next/source/lib/gitment/style目录下</li>
+<li>修改themes/next/layout/_third-party/comments/gitment.swig文件，将gitmint.browser.js和将default.css替换成如下地址：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"https://aimingoo.github.io/gitmint/style/default.css"</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">"https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">替换成</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"/lib/gitmint/style/default.css"</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">"/lib/gitmint/gitmint.browser.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -2063,6 +2095,19 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="/lib/gitmint/style/default.css">
+        <script src="/lib/gitmint/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
 
 
 
