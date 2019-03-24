@@ -121,7 +121,7 @@
 <meta property="og:site_name" content="Dabai&#39;s Blogs">
 <meta property="og:description" content="pipenv常用命令1234567891011121314# pipenv --where                 列出本地工程路径# pipenv --venv                  列出虚拟环境路径# pipenv --py                    列出虚拟环境的Python可执行文件# pipenv install                 创建虚拟环">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-09T14:43:18.081Z">
+<meta property="og:updated_time" content="2019-03-23T13:24:25.999Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python常用命令一览">
 <meta name="twitter:description" content="pipenv常用命令1234567891011121314# pipenv --where                 列出本地工程路径# pipenv --venv                  列出虚拟环境路径# pipenv --py                    列出虚拟环境的Python可执行文件# pipenv install                 创建虚拟环">
@@ -408,6 +408,8 @@
 
       
         <h1 id="pipenv常用命令"><a href="#pipenv常用命令" class="headerlink" title="pipenv常用命令"></a>pipenv常用命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pipenv --where                 列出本地工程路径</span></span><br><span class="line"><span class="comment"># pipenv --venv                  列出虚拟环境路径</span></span><br><span class="line"><span class="comment"># pipenv --py                    列出虚拟环境的Python可执行文件</span></span><br><span class="line"><span class="comment"># pipenv install                 创建虚拟环境</span></span><br><span class="line"><span class="comment"># pipenv isntall [moduel]        安装包</span></span><br><span class="line"><span class="comment"># pipenv install [moduel] --dev  安装包到开发环境</span></span><br><span class="line"><span class="comment"># pipenv uninstall[module]       卸载包</span></span><br><span class="line"><span class="comment"># pipenv uninstall --all         卸载所有包</span></span><br><span class="line"><span class="comment"># pipenv graph                   查看包依赖</span></span><br><span class="line"><span class="comment"># pipenv lock                    生成lockfile</span></span><br><span class="line"><span class="comment"># pipenv run python [pyfile]     运行py文件</span></span><br><span class="line"><span class="comment"># pipenv --rm                    删除虚拟环境</span></span><br><span class="line"><span class="comment"># pipenv shell                   Python虚拟环境</span></span><br><span class="line"><span class="comment"># deactivate                     退出Python虚拟环境</span></span><br></pre></td></tr></table></figure>
+<p>pipenv install时，lock这一步耗时较长。安装时可以用命令pipenv install –skip-lock python-package跳过lock，等到要部署或git push时再运行pipenv lock生成Pipfile.lock文件。例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pipenv install --skip-lock flask</span></span><br><span class="line"><span class="comment"># pipenv lock</span></span><br></pre></td></tr></table></figure>
       
     </div>
     

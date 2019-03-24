@@ -836,6 +836,8 @@
         
           
             <h1 id="pipenv常用命令"><a href="#pipenv常用命令" class="headerlink" title="pipenv常用命令"></a>pipenv常用命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pipenv --where                 列出本地工程路径</span></span><br><span class="line"><span class="comment"># pipenv --venv                  列出虚拟环境路径</span></span><br><span class="line"><span class="comment"># pipenv --py                    列出虚拟环境的Python可执行文件</span></span><br><span class="line"><span class="comment"># pipenv install                 创建虚拟环境</span></span><br><span class="line"><span class="comment"># pipenv isntall [moduel]        安装包</span></span><br><span class="line"><span class="comment"># pipenv install [moduel] --dev  安装包到开发环境</span></span><br><span class="line"><span class="comment"># pipenv uninstall[module]       卸载包</span></span><br><span class="line"><span class="comment"># pipenv uninstall --all         卸载所有包</span></span><br><span class="line"><span class="comment"># pipenv graph                   查看包依赖</span></span><br><span class="line"><span class="comment"># pipenv lock                    生成lockfile</span></span><br><span class="line"><span class="comment"># pipenv run python [pyfile]     运行py文件</span></span><br><span class="line"><span class="comment"># pipenv --rm                    删除虚拟环境</span></span><br><span class="line"><span class="comment"># pipenv shell                   Python虚拟环境</span></span><br><span class="line"><span class="comment"># deactivate                     退出Python虚拟环境</span></span><br></pre></td></tr></table></figure>
+<p>pipenv install时，lock这一步耗时较长。安装时可以用命令pipenv install –skip-lock python-package跳过lock，等到要部署或git push时再运行pipenv lock生成Pipfile.lock文件。例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pipenv install --skip-lock flask</span></span><br><span class="line"><span class="comment"># pipenv lock</span></span><br></pre></td></tr></table></figure>
           
         
       
@@ -984,6 +986,10 @@
 <li>netstat -tunlp |grep 端口号，用于查看指定的端口号的进程情况，如查看8000端口的情况，netstat -tunlp | grep 8000</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># netstat -tunlp</span></span><br><span class="line">Active Internet connections (only servers)</span><br><span class="line">Proto Recv-Q Send-Q Local Address               Foreign Address             State       PID/Program name   </span><br><span class="line">tcp        0      0 0.0.0.0:111                 0.0.0.0:*                   LISTEN      4814/rpcbind</span><br></pre></td></tr></table></figure>
+<h1 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h1><ul>
+<li>df -h 查看磁盘剩余空间</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># df -h</span></span><br><span class="line">Filesystem                               Size  Used Avail Use% Mounted on</span><br><span class="line">devtmpfs                                 3.9G     0  3.9G   0% /dev</span><br><span class="line">tmpfs                                    3.9G     0  3.9G   0% /dev/shm</span><br><span class="line">tmpfs                                    3.9G  1.9M  3.9G   1% /run</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1244,6 +1250,10 @@
 <li>打开 gitmint.browser.js 然后寻找代码字符串<a href="https://gh-oauth.imsun.net,替换成刚刚启动的自己的服务地址。" target="_blank" rel="noopener">https://gh-oauth.imsun.net,替换成刚刚启动的自己的服务地址。</a> </li>
 </ul>
 </li>
+</ul>
+<h1 id="绑定自定义域名"><a href="#绑定自定义域名" class="headerlink" title="绑定自定义域名"></a>绑定自定义域名</h1><ul>
+<li>在github.io仓库设置设置自定义域名，如<a href="http://www.dabai.wiki" target="_blank" rel="noopener">www.dabai.wiki</a></li>
+<li>绑定CNAME<br>在 DNS 管理中添加一条 CNAME 记录，将 <a href="http://www.dabai.wiki" target="_blank" rel="noopener">www.dabai.wiki</a> 子域名指向 samuelbaizg.github.io，随后用 dig 命令来查看 DNS 解析情况.</li>
 </ul>
 
           

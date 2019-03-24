@@ -121,7 +121,7 @@
 <meta property="og:site_name" content="Dabai&#39;s Blogs">
 <meta property="og:description" content="网络 lsof -i:端口号 用于查看某一端口的占用情况，比如查看8000端口使用情况，lsof -i:8000  123# lsof -i:8000COMMAND   PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAMElwfs    22065 root    6u  IPv4 4395053      0t0  TCP *:irdmi (LISTEN">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-03T14:28:48.521Z">
+<meta property="og:updated_time" content="2019-03-23T12:48:02.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fedora常用命令一览">
 <meta name="twitter:description" content="网络 lsof -i:端口号 用于查看某一端口的占用情况，比如查看8000端口使用情况，lsof -i:8000  123# lsof -i:8000COMMAND   PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAMElwfs    22065 root    6u  IPv4 4395053      0t0  TCP *:irdmi (LISTEN">
@@ -415,6 +415,10 @@
 <li>netstat -tunlp |grep 端口号，用于查看指定的端口号的进程情况，如查看8000端口的情况，netstat -tunlp | grep 8000</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># netstat -tunlp</span></span><br><span class="line">Active Internet connections (only servers)</span><br><span class="line">Proto Recv-Q Send-Q Local Address               Foreign Address             State       PID/Program name   </span><br><span class="line">tcp        0      0 0.0.0.0:111                 0.0.0.0:*                   LISTEN      4814/rpcbind</span><br></pre></td></tr></table></figure>
+<h1 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h1><ul>
+<li>df -h 查看磁盘剩余空间</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># df -h</span></span><br><span class="line">Filesystem                               Size  Used Avail Use% Mounted on</span><br><span class="line">devtmpfs                                 3.9G     0  3.9G   0% /dev</span><br><span class="line">tmpfs                                    3.9G     0  3.9G   0% /dev/shm</span><br><span class="line">tmpfs                                    3.9G  1.9M  3.9G   1% /run</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -643,7 +647,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络"><span class="nav-number">1.</span> <span class="nav-text">网络</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络"><span class="nav-number">1.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘"><span class="nav-number">2.</span> <span class="nav-text">磁盘</span></a></li></ol></div>
             
 
           </div>
