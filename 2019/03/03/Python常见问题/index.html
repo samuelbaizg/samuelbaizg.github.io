@@ -116,14 +116,14 @@
 <meta name="description" content="pipenv常用命令1234567891011121314# pipenv --where                 列出本地工程路径# pipenv --venv                  列出虚拟环境路径# pipenv --py                    列出虚拟环境的Python可执行文件# pipenv install                 创建虚拟环">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python常用命令一览">
-<meta property="og:url" content="http://samuelbaizg.github.io/2019/03/03/Python常用命令一览/index.html">
+<meta property="og:title" content="Python常见问题">
+<meta property="og:url" content="http://samuelbaizg.github.io/2019/03/03/Python常见问题/index.html">
 <meta property="og:site_name" content="Dabai&#39;s Blogs">
 <meta property="og:description" content="pipenv常用命令1234567891011121314# pipenv --where                 列出本地工程路径# pipenv --venv                  列出虚拟环境路径# pipenv --py                    列出虚拟环境的Python可执行文件# pipenv install                 创建虚拟环">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-23T13:24:25.999Z">
+<meta property="og:updated_time" content="2019-04-27T04:53:27.192Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python常用命令一览">
+<meta name="twitter:title" content="Python常见问题">
 <meta name="twitter:description" content="pipenv常用命令1234567891011121314# pipenv --where                 列出本地工程路径# pipenv --venv                  列出虚拟环境路径# pipenv --py                    列出虚拟环境的Python可执行文件# pipenv install                 创建虚拟环">
 
 
@@ -154,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="http://samuelbaizg.github.io/2019/03/03/Python常用命令一览/">
+  <link rel="canonical" href="http://samuelbaizg.github.io/2019/03/03/Python常见问题/">
 
 
 
 
 
-  <title>Python常用命令一览 | Dabai's Blogs</title>
+  <title>Python常见问题 | Dabai's Blogs</title>
   
 
 
@@ -308,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://samuelbaizg.github.io/2019/03/03/Python常用命令一览/">
+    <link itemprop="mainEntityOfPage" href="http://samuelbaizg.github.io/2019/03/03/Python常见问题/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dabai">
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python常用命令一览</h1>
+          <h1 class="post-title" itemprop="name headline">Python常见问题</h1>
         
 
         <div class="post-meta">
@@ -378,8 +378,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/03/Python常用命令一览/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/03/03/Python常用命令一览/" itemprop="commentsCount"></span>
+                <a href="/2019/03/03/Python常见问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/03/03/Python常见问题/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -410,6 +410,15 @@
         <h1 id="pipenv常用命令"><a href="#pipenv常用命令" class="headerlink" title="pipenv常用命令"></a>pipenv常用命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pipenv --where                 列出本地工程路径</span></span><br><span class="line"><span class="comment"># pipenv --venv                  列出虚拟环境路径</span></span><br><span class="line"><span class="comment"># pipenv --py                    列出虚拟环境的Python可执行文件</span></span><br><span class="line"><span class="comment"># pipenv install                 创建虚拟环境</span></span><br><span class="line"><span class="comment"># pipenv isntall [moduel]        安装包</span></span><br><span class="line"><span class="comment"># pipenv install [moduel] --dev  安装包到开发环境</span></span><br><span class="line"><span class="comment"># pipenv uninstall[module]       卸载包</span></span><br><span class="line"><span class="comment"># pipenv uninstall --all         卸载所有包</span></span><br><span class="line"><span class="comment"># pipenv graph                   查看包依赖</span></span><br><span class="line"><span class="comment"># pipenv lock                    生成lockfile</span></span><br><span class="line"><span class="comment"># pipenv run python [pyfile]     运行py文件</span></span><br><span class="line"><span class="comment"># pipenv --rm                    删除虚拟环境</span></span><br><span class="line"><span class="comment"># pipenv shell                   Python虚拟环境</span></span><br><span class="line"><span class="comment"># deactivate                     退出Python虚拟环境</span></span><br></pre></td></tr></table></figure>
 <p>pipenv install时，lock这一步耗时较长。安装时可以用命令pipenv install –skip-lock python-package跳过lock，等到要部署或git push时再运行pipenv lock生成Pipfile.lock文件。例如：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pipenv install --skip-lock flask</span></span><br><span class="line"><span class="comment"># pipenv lock</span></span><br></pre></td></tr></table></figure>
+<h1 id="安装Pycurl报错"><a href="#安装Pycurl报错" class="headerlink" title="安装Pycurl报错"></a>安装Pycurl报错</h1><ul>
+<li>报ssl错，如下面命令所示，安装前先输出环境变量</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pip uninstall pycurl</span></span><br><span class="line"><span class="comment"># export PYCURL_SSL_LIBRARY=openssl</span></span><br><span class="line"><span class="comment"># export LDFLAGS=-L/usr/local/opt/openssl/lib;</span></span><br><span class="line"><span class="comment"># export CPPFLAGS=-I/usr/local/opt/openssl/include;</span></span><br><span class="line"><span class="comment"># pip install pycurl --compile --no-cache-dir</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>报no python.# 错，运行如下命令安装python开发包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># dnf install python-devel   // python 2</span></span><br><span class="line"><span class="comment"># dnf install python3-devel  // python 3</span></span><br></pre></td></tr></table></figure>
+<h1 id="卸载Python-setup-py-install安装的包"><a href="#卸载Python-setup-py-install安装的包" class="headerlink" title="卸载Python setup.py install安装的包"></a>卸载Python setup.py install安装的包</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python ./setup.py install --record install.txt  // 重新装一遍，生成install.txt</span></span><br><span class="line"><span class="comment"># cat install.txt | xargs rm -rf  // 删除</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -429,7 +438,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://samuelbaizg.github.io/2019/03/03/Python常用命令一览/" title="Python常用命令一览">http://samuelbaizg.github.io/2019/03/03/Python常用命令一览/</a>
+    <a href="http://samuelbaizg.github.io/2019/03/03/Python常见问题/" title="Python常见问题">http://samuelbaizg.github.io/2019/03/03/Python常见问题/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -547,7 +556,7 @@
               <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Dabai">
             
               <p class="site-author-name" itemprop="name">Dabai</p>
-              <p class="site-description motion-element" itemprop="description">大白是一枚老程序猿，本博客记录大白学习机器学习、量化交易以及编程实践中的点点滴滴</p>
+              <p class="site-description motion-element" itemprop="description">大白是一枚程序猿，本博客记录大白学习机器学习、量化交易以及编程实践中的点点滴滴</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -635,7 +644,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pipenv常用命令"><span class="nav-number">1.</span> <span class="nav-text">pipenv常用命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pipenv常用命令"><span class="nav-number">1.</span> <span class="nav-text">pipenv常用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Pycurl报错"><span class="nav-number">2.</span> <span class="nav-text">安装Pycurl报错</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#卸载Python-setup-py-install安装的包"><span class="nav-number">3.</span> <span class="nav-text">卸载Python setup.py install安装的包</span></a></li></ol></div>
             
 
           </div>

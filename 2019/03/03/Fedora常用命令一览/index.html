@@ -121,7 +121,7 @@
 <meta property="og:site_name" content="Dabai&#39;s Blogs">
 <meta property="og:description" content="网络 lsof -i:端口号 用于查看某一端口的占用情况，比如查看8000端口使用情况，lsof -i:8000  123# lsof -i:8000COMMAND   PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAMElwfs    22065 root    6u  IPv4 4395053      0t0  TCP *:irdmi (LISTEN">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-23T12:48:02.090Z">
+<meta property="og:updated_time" content="2019-04-06T00:42:21.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fedora常用命令一览">
 <meta name="twitter:description" content="网络 lsof -i:端口号 用于查看某一端口的占用情况，比如查看8000端口使用情况，lsof -i:8000  123# lsof -i:8000COMMAND   PID USER   FD   TYPE  DEVICE SIZE/OFF NODE NAMElwfs    22065 root    6u  IPv4 4395053      0t0  TCP *:irdmi (LISTEN">
@@ -419,6 +419,15 @@
 <li>df -h 查看磁盘剩余空间</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># df -h</span></span><br><span class="line">Filesystem                               Size  Used Avail Use% Mounted on</span><br><span class="line">devtmpfs                                 3.9G     0  3.9G   0% /dev</span><br><span class="line">tmpfs                                    3.9G     0  3.9G   0% /dev/shm</span><br><span class="line">tmpfs                                    3.9G  1.9M  3.9G   1% /run</span><br></pre></td></tr></table></figure>
+<h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><ul>
+<li>查看安装的rpm包的安装路径</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># rpm -qa phpMyAdmin</span></span><br><span class="line">phpMyAdmin-4.8.5-1.fc29.noarch</span><br><span class="line"><span class="comment"># rpm -ql phpMyAdmin-4.8.5-1.fc29.noarch</span></span><br><span class="line">/etc/httpd/conf.d/phpMyAdmin.conf</span><br><span class="line">/etc/nginx/default.d/phpMyAdmin.conf</span><br><span class="line">/etc/phpMyAdmin</span><br><span class="line">/etc/phpMyAdmin/config.inc.php</span><br><span class="line">/usr/share/phpMyAdmin</span><br><span class="line">/usr/share/phpMyAdmin/ajax.php</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h1 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h1><ul>
+<li>who -b – 查看最后一次（上次）系统启动的时间</li>
+<li>who -r – 查看最后一次（上次）系统启动的时间和运行级别</li>
+<li>last reboot – 系统重启的记录</li>
+</ul>
 
       
     </div>
@@ -479,8 +488,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/03/Python常用命令一览/" rel="prev" title="Python常用命令一览">
-                Python常用命令一览 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/03/Python常见问题/" rel="prev" title="Python常见问题">
+                Python常见问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -559,7 +568,7 @@
               <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Dabai">
             
               <p class="site-author-name" itemprop="name">Dabai</p>
-              <p class="site-description motion-element" itemprop="description">大白是一枚老程序猿，本博客记录大白学习机器学习、量化交易以及编程实践中的点点滴滴</p>
+              <p class="site-description motion-element" itemprop="description">大白是一枚程序猿，本博客记录大白学习机器学习、量化交易以及编程实践中的点点滴滴</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -647,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络"><span class="nav-number">1.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘"><span class="nav-number">2.</span> <span class="nav-text">磁盘</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络"><span class="nav-number">1.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘"><span class="nav-number">2.</span> <span class="nav-text">磁盘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#软件"><span class="nav-number">3.</span> <span class="nav-text">软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统"><span class="nav-number">4.</span> <span class="nav-text">系统</span></a></li></ol></div>
             
 
           </div>

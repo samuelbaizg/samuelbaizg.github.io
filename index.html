@@ -113,17 +113,17 @@
 
 
 
-<meta name="description" content="大白是一枚老程序猿，本博客记录大白学习机器学习、量化交易以及编程实践中的点点滴滴">
+<meta name="description" content="大白是一枚程序猿，本博客记录大白学习机器学习、量化交易以及编程实践中的点点滴滴">
 <meta name="keywords" content="机器学习，深度学习，强化学习，量化交易，编程，Python">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Dabai&#39;s Blogs">
 <meta property="og:url" content="http://samuelbaizg.github.io/index.html">
 <meta property="og:site_name" content="Dabai&#39;s Blogs">
-<meta property="og:description" content="大白是一枚老程序猿，本博客记录大白学习机器学习、量化交易以及编程实践中的点点滴滴">
+<meta property="og:description" content="大白是一枚程序猿，本博客记录大白学习机器学习、量化交易以及编程实践中的点点滴滴">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dabai&#39;s Blogs">
-<meta name="twitter:description" content="大白是一枚老程序猿，本博客记录大白学习机器学习、量化交易以及编程实践中的点点滴滴">
+<meta name="twitter:description" content="大白是一枚程序猿，本博客记录大白学习机器学习、量化交易以及编程实践中的点点滴滴">
 
 
 
@@ -742,7 +742,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://samuelbaizg.github.io/2019/03/03/Python常用命令一览/">
+    <link itemprop="mainEntityOfPage" href="http://samuelbaizg.github.io/2019/03/03/Python常见问题/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dabai">
@@ -761,7 +761,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/03/Python常用命令一览/" itemprop="url">Python常用命令一览</a></h1>
+                <a class="post-title-link" href="/2019/03/03/Python常见问题/" itemprop="url">Python常见问题</a></h1>
         
 
         <div class="post-meta">
@@ -838,6 +838,15 @@
             <h1 id="pipenv常用命令"><a href="#pipenv常用命令" class="headerlink" title="pipenv常用命令"></a>pipenv常用命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pipenv --where                 列出本地工程路径</span></span><br><span class="line"><span class="comment"># pipenv --venv                  列出虚拟环境路径</span></span><br><span class="line"><span class="comment"># pipenv --py                    列出虚拟环境的Python可执行文件</span></span><br><span class="line"><span class="comment"># pipenv install                 创建虚拟环境</span></span><br><span class="line"><span class="comment"># pipenv isntall [moduel]        安装包</span></span><br><span class="line"><span class="comment"># pipenv install [moduel] --dev  安装包到开发环境</span></span><br><span class="line"><span class="comment"># pipenv uninstall[module]       卸载包</span></span><br><span class="line"><span class="comment"># pipenv uninstall --all         卸载所有包</span></span><br><span class="line"><span class="comment"># pipenv graph                   查看包依赖</span></span><br><span class="line"><span class="comment"># pipenv lock                    生成lockfile</span></span><br><span class="line"><span class="comment"># pipenv run python [pyfile]     运行py文件</span></span><br><span class="line"><span class="comment"># pipenv --rm                    删除虚拟环境</span></span><br><span class="line"><span class="comment"># pipenv shell                   Python虚拟环境</span></span><br><span class="line"><span class="comment"># deactivate                     退出Python虚拟环境</span></span><br></pre></td></tr></table></figure>
 <p>pipenv install时，lock这一步耗时较长。安装时可以用命令pipenv install –skip-lock python-package跳过lock，等到要部署或git push时再运行pipenv lock生成Pipfile.lock文件。例如：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pipenv install --skip-lock flask</span></span><br><span class="line"><span class="comment"># pipenv lock</span></span><br></pre></td></tr></table></figure>
+<h1 id="安装Pycurl报错"><a href="#安装Pycurl报错" class="headerlink" title="安装Pycurl报错"></a>安装Pycurl报错</h1><ul>
+<li>报ssl错，如下面命令所示，安装前先输出环境变量</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pip uninstall pycurl</span></span><br><span class="line"><span class="comment"># export PYCURL_SSL_LIBRARY=openssl</span></span><br><span class="line"><span class="comment"># export LDFLAGS=-L/usr/local/opt/openssl/lib;</span></span><br><span class="line"><span class="comment"># export CPPFLAGS=-I/usr/local/opt/openssl/include;</span></span><br><span class="line"><span class="comment"># pip install pycurl --compile --no-cache-dir</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>报no python.# 错，运行如下命令安装python开发包</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># dnf install python-devel   // python 2</span></span><br><span class="line"><span class="comment"># dnf install python3-devel  // python 3</span></span><br></pre></td></tr></table></figure>
+<h1 id="卸载Python-setup-py-install安装的包"><a href="#卸载Python-setup-py-install安装的包" class="headerlink" title="卸载Python setup.py install安装的包"></a>卸载Python setup.py install安装的包</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python ./setup.py install --record install.txt  // 重新装一遍，生成install.txt</span></span><br><span class="line"><span class="comment"># cat install.txt | xargs rm -rf  // 删除</span></span><br></pre></td></tr></table></figure>
           
         
       
@@ -990,6 +999,15 @@
 <li>df -h 查看磁盘剩余空间</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># df -h</span></span><br><span class="line">Filesystem                               Size  Used Avail Use% Mounted on</span><br><span class="line">devtmpfs                                 3.9G     0  3.9G   0% /dev</span><br><span class="line">tmpfs                                    3.9G     0  3.9G   0% /dev/shm</span><br><span class="line">tmpfs                                    3.9G  1.9M  3.9G   1% /run</span><br></pre></td></tr></table></figure>
+<h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><ul>
+<li>查看安装的rpm包的安装路径</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># rpm -qa phpMyAdmin</span></span><br><span class="line">phpMyAdmin-4.8.5-1.fc29.noarch</span><br><span class="line"><span class="comment"># rpm -ql phpMyAdmin-4.8.5-1.fc29.noarch</span></span><br><span class="line">/etc/httpd/conf.d/phpMyAdmin.conf</span><br><span class="line">/etc/nginx/default.d/phpMyAdmin.conf</span><br><span class="line">/etc/phpMyAdmin</span><br><span class="line">/etc/phpMyAdmin/config.inc.php</span><br><span class="line">/usr/share/phpMyAdmin</span><br><span class="line">/usr/share/phpMyAdmin/ajax.php</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h1 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h1><ul>
+<li>who -b – 查看最后一次（上次）系统启动的时间</li>
+<li>who -r – 查看最后一次（上次）系统启动的时间和运行级别</li>
+<li>last reboot – 系统重启的记录</li>
+</ul>
 
           
         
@@ -1616,7 +1634,7 @@
 <h2 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h2><ul>
 <li>安装MySQL Server</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo dnf install libaio</span></span><br><span class="line"><span class="comment"># cd ~/Downloads/</span></span><br><span class="line"><span class="comment"># wget https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-5.7.25-linux-glibc2.12-x86_64.tar.gz</span></span><br><span class="line"><span class="comment"># tar xzvf mysql-5.7.25-linux-glibc2.12-x86_64.tar.gz</span></span><br><span class="line"><span class="comment"># sudo mv mysql-5.7.25-linux-glibc2.12-x86_64 /usr/local</span></span><br><span class="line"><span class="comment"># sudo ln -s /usr/local/mysql-5.7.24-linux-glibc2.12-x86_64/ mysql</span></span><br><span class="line"><span class="comment"># sudo service sssd stop</span></span><br><span class="line"><span class="comment"># sudo groupadd mysql</span></span><br><span class="line"><span class="comment"># sudo useradd -r -g mysql -s /bin/false mysql</span></span><br><span class="line"><span class="comment"># cd mysql</span></span><br><span class="line"><span class="comment"># mkdir mysql-files</span></span><br><span class="line"><span class="comment"># sudo chown mysql:mysql mysql-files</span></span><br><span class="line"><span class="comment"># sudo chmod 750 mysql-files</span></span><br><span class="line"><span class="comment"># bin/mysqld --initialize --user=mysql</span></span><br><span class="line">记住行末尾的root的临时密码</span><br><span class="line"><span class="comment"># bin/mysql_ssl_rsa_setup</span></span><br><span class="line"><span class="comment"># bin/mysqld_safe --user=mysql &amp;</span></span><br><span class="line"><span class="comment"># sudo cp support-files/mysql.server /etc/init.d/mysql.server</span></span><br><span class="line"><span class="comment"># /etc/init.d/mysql.server start</span></span><br><span class="line"><span class="comment"># bin/mysql -uroot -p</span></span><br><span class="line">输入root的临时秘密</span><br><span class="line">mysql &gt; alter user <span class="string">'root'</span>@<span class="string">'localhost'</span> identified by <span class="string">'123456'</span>;</span><br><span class="line">mysql &gt; use mysql;</span><br><span class="line">mysql &gt; update user <span class="built_in">set</span> user.Host=<span class="string">'%'</span> <span class="built_in">where</span> user.User=<span class="string">'root'</span>;</span><br><span class="line">mysql &gt; flush privileges;</span><br><span class="line">mysql &gt; quit;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo dnf install libaio</span></span><br><span class="line"><span class="comment"># cd ~/Downloads/</span></span><br><span class="line"><span class="comment"># wget https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-5.7.25-linux-glibc2.12-x86_64.tar.gz</span></span><br><span class="line"><span class="comment"># tar xzvf mysql-5.7.25-linux-glibc2.12-x86_64.tar.gz</span></span><br><span class="line"><span class="comment"># sudo mv mysql-5.7.25-linux-glibc2.12-x86_64 /usr/local</span></span><br><span class="line"><span class="comment"># sudo ln -s /usr/local/mysql-5.7.24-linux-glibc2.12-x86_64/ mysql</span></span><br><span class="line"><span class="comment"># sudo service sssd stop</span></span><br><span class="line"><span class="comment"># sudo groupadd mysql</span></span><br><span class="line"><span class="comment"># sudo useradd -r -g mysql -s /bin/false mysql</span></span><br><span class="line"><span class="comment"># cd mysql</span></span><br><span class="line"><span class="comment"># mkdir mysql-files</span></span><br><span class="line"><span class="comment"># sudo chown mysql:mysql mysql-files</span></span><br><span class="line"><span class="comment"># sudo chmod 750 mysql-files</span></span><br><span class="line"><span class="comment"># bin/mysqld --initialize --user=mysql</span></span><br><span class="line">记住行末尾的root的临时密码</span><br><span class="line"><span class="comment"># bin/mysql_ssl_rsa_setup</span></span><br><span class="line"><span class="comment"># bin/mysqld_safe --user=mysql &amp;</span></span><br><span class="line"><span class="comment"># sudo cp support-files/mysql.server /etc/init.d/mysql.server</span></span><br><span class="line"><span class="comment"># /etc/init.d/mysql.server start</span></span><br><span class="line"><span class="comment"># bin/mysql -uroot -p</span></span><br><span class="line">输入root的临时秘密</span><br><span class="line">mysql &gt; alter user <span class="string">'root'</span>@<span class="string">'localhost'</span> identified by <span class="string">'123456'</span>;</span><br><span class="line">mysql &gt; use mysql;</span><br><span class="line">mysql &gt; update user <span class="built_in">set</span> user.Host=<span class="string">'%'</span> <span class="built_in">where</span> user.User=<span class="string">'root'</span>;</span><br><span class="line">mysql &gt; flush privileges;</span><br><span class="line">mysql &gt; quit;</span><br><span class="line">:q!</span><br></pre></td></tr></table></figure>
 <ul>
 <li>安装MySQL Workbench</li>
 </ul>
@@ -1625,6 +1643,29 @@
 <li>解决mariadb冲突<br>如果Fedora安装了mariadb，则/etc/my.cnf的配置会指向mariadb的安装路径，会出现启动不了上述步骤安装的mysql,运用如下命令解决这个问题。</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo mv /etc/my.cnf my.cnf.mariadb</span></span><br><span class="line"><span class="comment"># /etc/init.d/mysql.server restart</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装phpmyadmin</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo dnf install phpmyadmin</span></span><br><span class="line"><span class="comment"># systemctl restart httpd.service</span></span><br></pre></td></tr></table></figure>
+<p>访问 <a href="http://127.0.0.1/phpmyadmin时报如下两种错的解决办法：" target="_blank" rel="noopener">http://127.0.0.1/phpmyadmin时报如下两种错的解决办法：</a> </p>
+<ul>
+<li><p>mysqli_real_connect(): (HY000/2002): No such file or directory<br>在phpmyadmin配置文件中，将localhost改成127.0.0.1，如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo vim /etc/phpMyAdmin/config.inc.php</span></span><br><span class="line">---</span><br><span class="line"><span class="variable">$cfg</span>[<span class="string">'Servers'</span>][<span class="variable">$i</span>][<span class="string">'host'</span>]          = <span class="string">'localhost'</span>;</span><br><span class="line">+++</span><br><span class="line"><span class="variable">$cfg</span>[<span class="string">'Servers'</span>][<span class="variable">$i</span>][<span class="string">'host'</span>]          = <span class="string">'127.0.0.1'</span>；</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>phpmyadmin mysqli_real_connect(): (HY000/2002): Permission denied</p>
+</li>
+</ul>
+<p>通过如下命令关掉selenux，或者在selinux设置相关的权限。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo setenforce 0</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装Typora"><a href="#安装Typora" class="headerlink" title="安装Typora"></a>安装Typora</h2><ul>
+<li><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># wget https://typora.io/linux/Typora-linux-x64.tar.gz</span></span><br><span class="line"><span class="comment">#</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置桌面快捷方式<br>在~/.local/share/applications/中建立一个叫做Typora.desktop.desktop的文件</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Version=1.0</span><br><span class="line">Type=Application</span><br><span class="line">Name=Typora</span><br><span class="line">Icon=/usr/local/typora/resources/app/asserts/icon/icon_256x256@2x.png</span><br><span class="line">Exec=&quot;/usr/local/typora/Typora&quot;</span><br><span class="line">Comment=Markdown editor</span><br><span class="line">Categories=Development;IDE;</span><br><span class="line">Terminal=false</span><br><span class="line">Name[zh_CN]=Typora</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -1849,7 +1890,7 @@
               <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Dabai">
             
               <p class="site-author-name" itemprop="name">Dabai</p>
-              <p class="site-description motion-element" itemprop="description">大白是一枚老程序猿，本博客记录大白学习机器学习、量化交易以及编程实践中的点点滴滴</p>
+              <p class="site-description motion-element" itemprop="description">大白是一枚程序猿，本博客记录大白学习机器学习、量化交易以及编程实践中的点点滴滴</p>
           </div>
 
           <nav class="site-state motion-element">
