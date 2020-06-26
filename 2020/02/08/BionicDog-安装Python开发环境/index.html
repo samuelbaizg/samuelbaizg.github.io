@@ -121,7 +121,7 @@
 <meta property="og:site_name" content="Dabai&#39;s Blogs">
 <meta property="og:description" content="创建Changes.dat并设置启动菜单 使用SaveFile Creator（桌面顶部有快捷方式，左边数第4个图标）创建changes.dat（2G大小）并保存到/mnt/sdaX（X为U盘到设备号，可以用命令fdisk -l查看）。  在U盘找到live.cfg文件，位于isolinux目录下，修改使用第一步保存的文件启动BionicDog（不支持保存当前会话）。 1append initrd">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-09T08:39:17.174Z">
+<meta property="og:updated_time" content="2020-06-26T03:13:33.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BionicDog-安装Python开发环境">
 <meta name="twitter:description" content="创建Changes.dat并设置启动菜单 使用SaveFile Creator（桌面顶部有快捷方式，左边数第4个图标）创建changes.dat（2G大小）并保存到/mnt/sdaX（X为U盘到设备号，可以用命令fdisk -l查看）。  在U盘找到live.cfg文件，位于isolinux目录下，修改使用第一步保存的文件启动BionicDog（不支持保存当前会话）。 1append initrd">
@@ -455,7 +455,7 @@
 </ul>
 <h1 id="安装Python开发环境"><a href="#安装Python开发环境" class="headerlink" title="安装Python开发环境"></a>安装Python开发环境</h1><ul>
 <li><p>安装Python 3.8</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> apt install python3.8</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt install python3-pip</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> mkdir ~/.pip</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> apt install python3.8</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt install python3-pip</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> mkdir ~/.pip</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt install gcc</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt install python3-dev</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在.pip文件夹下创建文件pip.conf，并追加内容</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">trusted-host=mirrors.aliyun.com</span><br><span class="line">index-url=http://mirrors.aliyun.com/pypi/simple/</span><br></pre></td></tr></table></figure>
@@ -479,7 +479,10 @@
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> sudo dnf install nodejs</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sudo dnf install npm</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sudo npm install hexo-cli -g</span></span><br></pre></td></tr></table></figure>
 <h1 id="安装MySQL-8"><a href="#安装MySQL-8" class="headerlink" title="安装MySQL 8"></a>安装MySQL 8</h1><p>mysql官网(<a href="https://dev.mysql.com/downloads/repo/apt/)下载一个" target="_blank" rel="noopener">https://dev.mysql.com/downloads/repo/apt/)下载一个</a> Ubuntu / Debian (Architecture Independent), DEB Package (mysql-apt-config_0.8.10-1_all.deb) 的安装包</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> apt install lsb-release</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> dpkg -i mysql-apt-config_0.8.10-1_all.deb //界面选择 mysql 8.0，然后退出</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt update</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt install mysql-server</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> apt install lsb-release</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> dpkg -i mysql-apt-config_0.8.10-1_all.deb //界面选择 mysql 8.0，然后退出</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt update</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt install mysql-server</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> vim /etc/mysql/mysql.conf.d/mysqld.conf</span></span><br></pre></td></tr></table></figure>
+<p>datadir         = /mnt/sdaX/mysql-data</p>
+<p>mysqladmin -u用户名 -p旧密码 password 新密码 </p>
+<p>方法1： 用SET PASSWORD命令<br> 首先登录MySQL。<br> 格式：mysql&gt; set password for 用户名@localhost = password(‘新密码’);<br> 例子：mysql&gt; set password for root@localhost = password(‘123’); </p>
 
       
     </div>

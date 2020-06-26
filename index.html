@@ -756,7 +756,7 @@
 <ul>
 <li><p>Sigmoid函数 - $f(x) = 1 / (1 + e^{-x}))$</p>
 <p>它的函数和导函数图形如下：</p>
-<p><img src="//samuelbaizg.github.io/2020/06/21/神经网络概述/image-20200621145118248.png" alt="image-20200621145118248"></p>
+<p><img src="//samuelbaizg.github.io/2020/06/21/神经网络概述/image-20200621145118248.png" alt="image-20200621145118248" style="zoom:50%;"></p>
 <p>它有如下特点：</p>
 <ul>
 <li><p>是可导连续函数，导数可以通过自身求得，求导是指数运算，计算量大；</p>
@@ -768,7 +768,7 @@
 </li>
 <li><p>Tanh函数 - $ f(x) = (e^{x} - e^{-x})/(e^{x} + e^{-x})$</p>
 <p>它的函数和导函数图像如下：</p>
-<p><img src="//samuelbaizg.github.io/2020/06/21/神经网络概述/image-20200621150544009.png" alt="image-20200621150544009"></p>
+<p><img src="//samuelbaizg.github.io/2020/06/21/神经网络概述/image-20200621150544009.png" alt="image-20200621150544009" style="zoom:40%;"></p>
 <p>它有如下特点：</p>
 <ul>
 <li>它是连续可导函数，求导是指数运算，计算量大；</li>
@@ -780,7 +780,7 @@
 <ul>
 <li><p>Relu函数 - $f(x) = max(0, x)$</p>
 <p>它的函数和导函数图像如下：</p>
-<p><img src="//samuelbaizg.github.io/2020/06/21/神经网络概述/image-20200625121659046.png" alt="image-20200625121659046"></p>
+<p><img src="//samuelbaizg.github.io/2020/06/21/神经网络概述/image-20200625121659046.png" alt="image-20200625121659046" style="zoom:40%;"></p>
 <p>它有如下特点：</p>
 <ul>
 <li>分段可导函数，线性函数，导数是常数，计算量小；</li>
@@ -989,7 +989,7 @@
 </ul>
 <h1 id="安装Python开发环境"><a href="#安装Python开发环境" class="headerlink" title="安装Python开发环境"></a>安装Python开发环境</h1><ul>
 <li><p>安装Python 3.8</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> apt install python3.8</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt install python3-pip</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> mkdir ~/.pip</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> apt install python3.8</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt install python3-pip</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> mkdir ~/.pip</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt install gcc</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt install python3-dev</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在.pip文件夹下创建文件pip.conf，并追加内容</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">trusted-host=mirrors.aliyun.com</span><br><span class="line">index-url=http://mirrors.aliyun.com/pypi/simple/</span><br></pre></td></tr></table></figure>
@@ -1013,7 +1013,10 @@
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> sudo dnf install nodejs</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sudo dnf install npm</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> sudo npm install hexo-cli -g</span></span><br></pre></td></tr></table></figure>
 <h1 id="安装MySQL-8"><a href="#安装MySQL-8" class="headerlink" title="安装MySQL 8"></a>安装MySQL 8</h1><p>mysql官网(<a href="https://dev.mysql.com/downloads/repo/apt/)下载一个" target="_blank" rel="noopener">https://dev.mysql.com/downloads/repo/apt/)下载一个</a> Ubuntu / Debian (Architecture Independent), DEB Package (mysql-apt-config_0.8.10-1_all.deb) 的安装包</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> apt install lsb-release</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> dpkg -i mysql-apt-config_0.8.10-1_all.deb //界面选择 mysql 8.0，然后退出</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt update</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt install mysql-server</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> apt install lsb-release</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> dpkg -i mysql-apt-config_0.8.10-1_all.deb //界面选择 mysql 8.0，然后退出</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt update</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> apt install mysql-server</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> vim /etc/mysql/mysql.conf.d/mysqld.conf</span></span><br></pre></td></tr></table></figure>
+<p>datadir         = /mnt/sdaX/mysql-data</p>
+<p>mysqladmin -u用户名 -p旧密码 password 新密码 </p>
+<p>方法1： 用SET PASSWORD命令<br> 首先登录MySQL。<br> 格式：mysql&gt; set password for 用户名@localhost = password(‘新密码’);<br> 例子：mysql&gt; set password for root@localhost = password(‘123’); </p>
 
           
         
